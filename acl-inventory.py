@@ -118,11 +118,9 @@ def main():
     print(' done\n')
 
     FILENAME = "inventory.csv"
-    acl_names = ["INSIDE-IN"] # used for testing purposes
 
     singlePortIdentifiers = ["eq", "lt", "gt", "neq"]
-    skipWords = ["deny", "fqdn", "object", "inactive", "elements"]
-    #skipWords = ["fqdn", "object", "inactive", "elements"]
+    skipWords = ["fqdn", "object", "inactive", "elements"]
     ticketRegex = r"(SCTASK|INC|CHG)\d+"
     tupleRegex = [r"^host ((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}.\([-a-zA-Z0-9@%._\+~#=]{2,256}\.[a-z]{2,6}\b(?:[-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)\)", # host 10.1.1.1 (foo.bar.com)
                   r"^host ((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}", # host 10.1.1.1
